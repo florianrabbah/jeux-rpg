@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gladiator Game</title>
+    <style>
+        .character-info {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gladiator Game</h1>
+    <button onclick="startGame()">Start Game</button>
+    <div id="gameInfo"></div>
+    <script src="characters.js"></script>
+    <script src="game.js"></script>
+    <script>
+        function startGame() {
+            const game = new Game();
+            game.startGame();
+            game.watchStats(document.getElementById('gameInfo'));
+        }
+    </script>
+</body>
+</html>
